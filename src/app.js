@@ -1,5 +1,5 @@
 import angular from 'angular';
 
-const app = angular.module('demoApp', []);
+const app = angular.module('chatApp', []);
 
 export default app;

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en-US">
+<html lang="en-US" ng-app="chatApp">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>Default Page Title</title>
@@ -12,7 +12,11 @@
 </head>
 
 <body>
-  hi there
+  <div ng-controller="ChatCtrl as chat">
+    <div ng-init="chat.startServerConnection()">
+      <p ng-repeat="msg in chat.messages">{{msg}}</p>
+    </div>
+  </div>
 </body>
 
 <script type="text/javascript" src="dist/app.js"></script>

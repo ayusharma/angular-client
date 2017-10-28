@@ -4,6 +4,8 @@ export default function ($stateProvider) {
   $stateProvider.state('landing', {
     name: 'hello',
     url: '',
-    template: formTemplate
+    template: formTemplate,
+    controller: 'FormController',
+    controllerAs: 'FormController'
   });
 }

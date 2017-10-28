@@ -1,5 +1,6 @@
 import angular from 'angular';
+import '@uirouter/angularjs';
 
-const app = angular.module('chatApp', []);
-
-export default app;
+export default angular.module('PatientDataGeneration', [
+  'ui.router'
+]);

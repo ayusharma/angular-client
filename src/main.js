@@ -4,11 +4,11 @@ import routes from './router';
 // nav
 import nav from './nav/nav';
 
+// storeservice
+// import apiService from './api.service';
+
 // controllers
 import FormController from './form.controller';
-
-// store service
-import apiService from './api.service';
 
 
 app.controller('hello', function ($scope) {
@@ -18,7 +18,7 @@ app.controller('hello', function ($scope) {
 app.config(routes);
 
 app.directive('header', nav);
+// app.factory('apiService', apiService);
 app.controller('FormController', FormController);
-app.factory('apiService', apiService);
 
 export default app;

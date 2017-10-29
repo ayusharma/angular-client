@@ -235,7 +235,11 @@
                         </div>
                     </div>
                     <button type="button" class="btn btn-primary" ng-click="FormController.sayHello()">Submit</button>
+                    <!-- <div class="loader" ng-hide="FormController.showLoader"></div> -->
+                    <a ng-if="FormController.showLoader">Loading....</a>
+                    <a ng-if="FormController.link" target="_blank" href={{FormController.link}}>Download Data</a>
                 </div>
+
             </div>
         </form>
     </div>

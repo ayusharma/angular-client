@@ -9,13 +9,18 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="county">County</label>
-                                        <input type="text" class="form-control" placeholder="County Name">
+                                        <input type="text" class="form-control" 
+                                            placeholder="County Name" 
+                                            ng-model="FormController.demographics.county">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="population">Population</label>
-                                        <input type="number" class="form-control" placeholder="Population">
+                                        <input type="number" 
+                                            class="form-control" 
+                                            placeholder="Population" 
+                                            ng-model="FormController.demographics.population">
                                     </div>
                                 </div>
                             </div>
@@ -23,13 +28,17 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="gender">Gender</label>
-                                        <input type="text" class="form-control" placeholder="Male">
+                                        <input type="number" class="form-control" 
+                                            placeholder="Male"
+                                            ng-model="FormController.demographics.gender.male">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="gender">&nbsp;</label>
-                                        <input type="number" class="form-control" placeholder="Female">
+                                        <input type="number" class="form-control"
+                                             placeholder="Female"
+                                             ng-model="FormController.demographics.gender.female">
                                     </div>
                                 </div>
                             </div>
@@ -37,14 +46,10 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="state">State</label>
-                                        <input type="text" class="form-control" placeholder="Male">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="county">County</label>
-                                        <input type="number" class="form-control" placeholder="Female">
+                                        <label for="text">State</label>
+                                        <input type="number" class="form-control" 
+                                            placeholder="State"
+                                            ng-model="FormController.demographics.state">
                                     </div>
                                 </div>
                             </div>
@@ -53,19 +58,22 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="race">Race</label>
-                                        <input type="text" class="form-control" placeholder="White">
+                                        <input type="number" class="form-control" 
+                                        placeholder="White" ng-model="FormController.demographics.ages.white">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label for="gender">&nbsp;</label>
-                                        <input type="text" class="form-control" placeholder="Hispanic">
+                                        <label for="race">&nbsp;</label>
+                                        <input type="number" class="form-control" placeholder="Hispanic"
+                                         ng-model="FormController.demographics.ages.hispanic">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label for="gender">&nbsp;</label>
-                                        <input type="text" class="form-control" placeholder="Black">
+                                        <label for="race">&nbsp;</label>
+                                        <input type="number" class="form-control" placeholder="Black"
+                                         ng-model="FormController.demographics.ages.black">
                                     </div>
                                 </div>
                             </div>
@@ -73,19 +81,22 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <!-- <label for="gender">&nbsp;</label> -->
-                                        <input type="text" class="form-control" placeholder="Asian">
+                                        <input type="number" class="form-control" placeholder="Asian"
+                                         ng-model="FormController.demographics.ages.asian">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <!-- <label for="gender">&nbsp;</label> -->
-                                        <input type="text" class="form-control" placeholder="Native">
+                                        <input type="number" class="form-control" placeholder="Native"
+                                         ng-model="FormController.demographics.ages.native">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <!-- <label for="gender">&nbsp;</label> -->
-                                        <input type="text" class="form-control" placeholder="Others">
+                                        <input type="number" class="form-control" placeholder="Others"
+                                         ng-model="FormController.demographics.ages.others">
                                     </div>
                                 </div>
                             </div>
@@ -94,38 +105,44 @@
                             <div class="row">
                                 <div class="col-md-2">
                                     <div class="form-group">
-                                        <label for="gender">Income</label>
-                                        <input type="text" class="form-control" placeholder="Mean">
+                                        <label for="income">Income</label>
+                                        <input type="number" class="form-control" placeholder="Mean"
+                                         ng-model="FormController.demographics.income.mean">
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label for="income">&nbsp;</label>
+                                        <input type="number" class="form-control" placeholder="Meadian"
+                                         ng-model="FormController.demographics.income.median">
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label for="income">&nbsp;</label>
+                                        <input type="number" class="form-control" placeholder="00..10"
+                                         ng-model="FormController.demographics.income['00..10']">
                                     </div>
                                 </div>
                                 <div class="col-md-2">
                                     <div class="form-group">
                                         <label for="gender">&nbsp;</label>
-                                        <input type="text" class="form-control" placeholder="Meadian">
+                                        <input type="number" class="form-control" placeholder="10..15"
+                                         ng-model="FormController.demographics.income['10..15']">
                                     </div>
                                 </div>
                                 <div class="col-md-2">
                                     <div class="form-group">
                                         <label for="gender">&nbsp;</label>
-                                        <input type="text" class="form-control" placeholder="00..10">
+                                        <input type="number" class="form-control" placeholder="15..25"
+                                         ng-model="FormController.demographics.income['15..25']">
                                     </div>
                                 </div>
                                 <div class="col-md-2">
                                     <div class="form-group">
                                         <label for="gender">&nbsp;</label>
-                                        <input type="text" class="form-control" placeholder="10..15">
-                                    </div>
-                                </div>
-                                <div class="col-md-2">
-                                    <div class="form-group">
-                                        <label for="gender">&nbsp;</label>
-                                        <input type="text" class="form-control" placeholder="15..25">
-                                    </div>
-                                </div>
-                                <div class="col-md-2">
-                                    <div class="form-group">
-                                        <label for="gender">&nbsp;</label>
-                                        <input type="text" class="form-control" placeholder="25...30">
+                                        <input type="number" class="form-control" placeholder="25...30"
+                                         ng-model="FormController.demographics.income['25..30']">
                                     </div>
                                 </div>
                             </div>
@@ -134,37 +151,43 @@
                                 <div class="col-md-2">
                                     <div class="form-group">
                                         <!-- <label for="gender">Income</label> -->
-                                        <input type="text" class="form-control" placeholder="35..50">
+                                        <input type="number" class="form-control" placeholder="35..50"
+                                         ng-model="FormController.demographics.income['35..50']">
                                     </div>
                                 </div>
                                 <div class="col-md-2">
                                     <div class="form-group">
                                         <!-- <label for="gender">&nbsp;</label> -->
-                                        <input type="text" class="form-control" placeholder="50..75">
+                                        <input type="number" class="form-control" placeholder="50..75"
+                                         ng-model="FormController.demographics.income['50..75']">
                                     </div>
                                 </div>
                                 <div class="col-md-2">
                                     <div class="form-group">
                                         <!-- <label for="gender">&nbsp;</label> -->
-                                        <input type="text" class="form-control" placeholder="75..100">
+                                        <input type="number" class="form-control" placeholder="75..100"
+                                         ng-model="FormController.demographics.income['75..100']">
                                     </div>
                                 </div>
                                 <div class="col-md-2">
                                     <div class="form-group">
                                         <!-- <label for="gender">&nbsp;</label> -->
-                                        <input type="text" class="form-control" placeholder="100..150">
+                                        <input type="number" class="form-control" placeholder="100..150"
+                                         ng-model="FormController.demographics.income['100..150']">
                                     </div>
                                 </div>
                                 <div class="col-md-2">
                                     <div class="form-group">
                                         <!-- <label for="gender">&nbsp;</label> -->
-                                        <input type="text" class="form-control" placeholder="150..200">
+                                        <input type="number" class="form-control" placeholder="150..200"
+                                         ng-model="FormController.demographics.income['150..200']">
                                     </div>
                                 </div>
                                 <div class="col-md-2">
                                     <div class="form-group">
                                         <!-- <label for="gender">&nbsp;</label> -->
-                                        <input type="text" class="form-control" placeholder="200...999">
+                                        <input type="number" class="form-control" placeholder="200...999"
+                                         ng-model="FormController.demographics.income['200..999']">
                                     </div>
                                 </div>
                             </div>
@@ -173,31 +196,41 @@
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <label for="gender">Education</label>
-                                        <input type="text" class="form-control" placeholder="less than hs">
+                                        <input type="number" class="form-control" placeholder="less than hs">
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <label for="gender">&nbsp;</label>
-                                        <input type="text" class="form-control" placeholder="hs degree">
+                                        <input type="number" class="form-control" placeholder="hs degree">
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <label for="gender">&nbsp;</label>
-                                        <input type="text" class="form-control" placeholder="some college">
+                                        <input type="number" class="form-control" placeholder="some college">
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <label for="gender">&nbsp;</label>
-                                        <input type="text" class="form-control" placeholder="bs degreee">
+                                        <input type="number" class="form-control" placeholder="bs degreee">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="gender">Numbers of records</label>
+                                        <input type="number" class="form-control" placeholder="Records" 
+                                            ng-model="FormController.data.number_of_population">
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="button" class="btn btn-primary" ng-click="FormController.sayHello()">Submit</button>
                 </div>
             </div>
         </form>

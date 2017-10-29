@@ -8,7 +8,7 @@ import nav from './nav/nav';
 import FormController from './form.controller';
 
 // store service
-import apiService from './apiService';
+import apiService from './api.service';
 
 
 app.controller('hello', function ($scope) {

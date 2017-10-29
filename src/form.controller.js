@@ -5,13 +5,20 @@ class FormController {
 
     // angular dependencies
     this.vscope = $scope;
-    this.data = {
-      hello: 'hi'
+    this.data = {};
+    this.demographics = {
+      ages: {},
+      gender: {
+        male: 1
+      },
+      race: {},
+      income: {},
+      education: {}
     };
   }
 
   sayHello() {
-    console.log(this.data.hello);
+    console.log(this.demographics);
   }
 }
 

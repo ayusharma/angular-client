@@ -6,10 +6,13 @@ class FormController {
   constructor($scope, $http) {
     'ngInject';
 
+    this.showLoader = true;
     // angular dependencies
     this.vscope = $scope;
     this.$http = $http;
     this.data = {};
+    this.showLoader = false;
+    this.link = false;
     // this.demographics = {
     //   ages: {},
     //   gender: {},
@@ -83,25 +86,28 @@ class FormController {
   }
 
   sayHello() {
+    this.showLoader = true;
+    var that =  this;
     console.log(this.demographics);
     var basePath = "http://10.10.4.38:9000/generate";
     this.$http(
       {
         url: basePath,
-        data: JSON.stringify(this.demographics),
+        data: this.data,
         method: 'POST',
         crossDomain: true,
         headers: {
-          'Access-Control-Allow-Origin': '*'
+          'Content-Type': 'application/json'
         }
       })
     .then(function(res){
-      console.log(res)
+
+      that.showLoader = false;
+      that.link = res.data.bucket_url;
+    }, function(err){
+      console.log(err);
+      that.showLoader = false;
     })
-    .catch(function(err){
-      console.log(err)
-    })
-    // this.apiService.send(this.demographics);
   }
 }
 
